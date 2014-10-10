@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>US Goth Markets</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+  <nav id="login">
+    <%= link_to "Create account", new_vendor_path %>
+    <%= link_to "Sign-In" %>
+  </nav>
+
+
+
+  <div id="main-nav">
+
+    <p class="notice" ><%= notice %></p>
+    <p class="alert" ><%= alert %></p>
+
+    <%= link_to(image_tag("goth-cow.png", :alt => "US Goth Markets logo", :id=> "cow"), root_path) %>
+
+    <nav id="main-links">
+      <%= link_to "VENDORS", vendors_path %>&nbsp;/&nbsp;<a href="/market">MARKETS</a>&nbsp;/&nbsp;<a href="/">PRODUCTS</a>
+    </nav>
+
+    <form id="search">
+      Search: <input type="text" name="search">
+    </form>
+
+  </div>
+
+
+  <div id="wrapper">
+
+    <div id="content">
+
+      <p class="notice" ><%= notice %></p>
+
+      <%= yield %>
+
+    </div>
+
+  </div>
+
+
+
+</body>
+</html>

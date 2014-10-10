@@ -1,0 +1,139 @@
+body {
+  background-color: #000000;
+  font-family: "helvetica neue", sans-serif;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #6a6a6a;
+}
+
+a:hover {
+  color: #b6b6b6;
+}
+
+#login {
+  background-color: #343434;
+  font-size: 1em;
+  color: #ffffff;
+  width:100%;
+  margin: 0 auto;
+  opacity: 0.9;
+  padding: 1em 1em 1em 1em;
+  line-height: 1.5em;
+}
+
+#login a {
+  margin-left: 88%;
+  color: #ffffff;
+}
+
+#login a:hover {
+  color: #cbc8c8;
+}
+
+#main-nav {
+  padding: 1em 1em 1em 1em;
+  color: #d9d9d9;
+}
+
+#cow {
+  width: 15%;
+  float: left;
+  margin: 1em 3em 2em 1em;
+}
+
+#main-links {
+  float: left;
+  margin-top: 6%;
+  font-size: 1.7em;
+}
+
+form#search {
+  float: right;
+  margin-top: 6%;
+  margin-right: 2%;
+}
+
+form#search input[type="text"] {
+  width: 55%;
+  border: 1px solid #e5e5e5;
+}
+
+#wrapper {
+  clear: both;
+  width: 100%;
+  opacity: 0.9;
+  margin-top: 4em;
+  background-color: #e5e5e5;
+  padding: 1em 1em 1em 1em;
+}
+
+#content {
+  font-family: "Lucida Grande";
+  font-size: 1.2em;
+  width: 80%;
+  margin-left: 2em;
+}
+
+.big-letters {
+  font-family: "Palatino Linotype", "Book Antiqua", "Palatino", serif;
+  font-size: 2.2em;
+  color: #373737;
+  text-align: center;
+}
+
+h2 {
+  color: #a39d9d;
+}
+
+hr {
+  display: block;
+  border-top: 1px solid #000;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.buttons {
+  margin-left: 2em;
+}
+
+/* --- Forms Styling --------------------------- */
+form input[type="text"],
+form textarea {
+  border: none;
+  width: 30em;
+}
+
+form input,
+form textarea {
+  padding: 1em;
+}
+
+form textarea {
+  resize: none;
+  height: 7em;
+}
+
+form input[type="submit"],
+button {
+  border: none;
+  margin-top: 1%;
+  cursor: pointer;
+}
+
+button {
+  padding: 1em;
+}
+
+form input[type="submit"]:hover,
+button:hover {
+  background-color: #a39d9d;
+}
+
+td {
+  padding-right: 2em;
+}

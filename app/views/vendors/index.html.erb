@@ -1,0 +1,11 @@
+<h2>ALL GOTH VENDORS</h2>
+
+<ul>
+  <% @vendors.each do |vendor| %>
+    <h3><%= vendor.username %> Vendor</h3>
+    <li><em>Email</em>: <%= vendor.email %></li>
+    <li><em>Description</em>: <%= vendor.description %></li>
+    <li><em>ID #</em>: <%= vendor.id %></li>
+    <hr>
+  <% end %>
+</ul>
