@@ -10,16 +10,18 @@
 
 
   <nav id="login">
-    <%= link_to "Create account", new_vendor_path %>
-    <%= link_to "Sign-In" %>
+    <% if current_user %>
+      <%= link_to "My Account", show_vendor_path(:id) %>
+      <%= link_to "Sign Out", sign_out_path %>
+    <% else %>
+      <%= link_to "Create account", new_vendor_path %>
+      <%= link_to "Sign-In", sign_in_path %>
+    <% end %>
   </nav>
 
 
 
   <div id="main-nav">
-
-    <p class="notice" ><%= notice %></p>
-    <p class="alert" ><%= alert %></p>
 
     <%= link_to(image_tag("goth-cow.png", :alt => "US Goth Markets logo", :id=> "cow"), root_path) %>
 
