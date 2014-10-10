@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141009213716) do
+ActiveRecord::Schema.define(version: 20141010203422) do
+
+  create_table "markets", force: true do |t|
+    t.string   "location"
+    t.integer  "vendor_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+  end
 
   create_table "vendors", force: true do |t|
     t.string   "username"

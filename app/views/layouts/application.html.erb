@@ -23,10 +23,10 @@
 
   <div id="main-nav">
 
-    <%= link_to(image_tag("goth-cow.png", :alt => "US Goth Markets logo", :id=> "cow"), root_path) %>
+    <%= link_to(image_tag("goth-cow.png", alt: "US Goth Markets logo", id: "cow"), root_path) %>
 
     <nav id="main-links">
-      <%= link_to "VENDORS", vendors_path %>&nbsp;/&nbsp;<a href="/market">MARKETS</a>&nbsp;/&nbsp;<a href="/">PRODUCTS</a>
+      <%= link_to "VENDORS", vendors_path %>&nbsp;/&nbsp;<%= link_to "MARKETS", markets_path %>&nbsp;/&nbsp;<a href="/">PRODUCTS</a>
     </nav>
 
     <form id="search">

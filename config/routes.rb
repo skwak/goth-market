@@ -7,9 +7,15 @@ Rails.application.routes.draw do
   post "/vendors/new", to: "vendors#create"
   get "/vendors/:id",  to: "vendors#show",     as: :show_vendor
 
+  get "/markets",      to: "markets#index",    as: :markets
+  get "/markets/new",  to: "markets#new",      as: :new_market
+  post "/markets/new", to: "markets#create"
+  get "/markets/:id",  to: "markets#show",     as: :show_market
+
   get "/signin",       to: "sessions#new",     as: :sign_in
   post "/signin",      to: "sessions#create"
   get "/signout",      to: "sessions#destroy", as: :sign_out
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

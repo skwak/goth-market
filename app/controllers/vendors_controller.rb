@@ -20,10 +20,13 @@ class VendorsController < ApplicationController
   def show
     if session[:user_id]
       @vendor = Vendor.find(session[:user_id])
+      @market = Market.find(session[:user_id])
     else
       redirect_to root_path
     end
   end
+
+  private
 
   def vendor_params
     (params.require(:vendor).permit(:username, :email, :description))
