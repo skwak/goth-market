@@ -1,7 +1,7 @@
 <h2>New Market</h2>
 
 <form method="POST" action="<%= new_market_path %>">
-  Name: <input type="text" name="market[name]">
-  Location: <input type="text" name="market[location]">
+  <label for="market[name]">Name:</label><input type="text" name="market[name]">
+  <label for="market[location]">Location</label>: <input type="text" name="market[location]">
   <input type="submit" value="add market">
 </form>

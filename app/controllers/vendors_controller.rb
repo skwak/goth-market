@@ -18,12 +18,8 @@ class VendorsController < ApplicationController
   end
 
   def show
-    if session[:user_id]
-      @vendor = Vendor.find(session[:user_id])
-      @market = Market.find(session[:user_id])
-    else
-      redirect_to root_path
-    end
+    @vendor = Vendor.find(session[:user_id])
+    @market = Market.find_by(vendor_id: session[:user_id])
   end
 
   private

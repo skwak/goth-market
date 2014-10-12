@@ -11,14 +11,13 @@
 
   <nav id="login">
     <% if current_user %>
-      <%= link_to "My Account", show_vendor_path(:id) %>
+      <%= link_to "My Account", show_vendor_path(current_user.id) %>
       <%= link_to "Sign Out", sign_out_path %>
     <% else %>
       <%= link_to "Create account", new_vendor_path %>
       <%= link_to "Sign-In", sign_in_path %>
     <% end %>
   </nav>
-
 
 
   <div id="main-nav">
