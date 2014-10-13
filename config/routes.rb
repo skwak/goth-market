@@ -2,11 +2,15 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  get "/vendors",      to: "vendors#index",    as: :vendors
-  get "/vendors/new",  to: "vendors#new",      as: :new_vendor
-  post "/vendors/new", to: "vendors#create"
-  get "/vendors/:id",  to: "vendors#show",     as: :show_vendor
+  get "/vendors",                 to: "vendors#index",    as: :vendors
+  get "/vendors/new",             to: "vendors#new",      as: :new_vendor
+  post "/vendors/new",            to: "vendors#create"
+  get "/vendors/:id",             to: "vendors#show",     as: :show_vendor
+  get "/vendors/:id/delete",      to: "vendors#destroy",  as: :delete_vendor
+  delete "/vendors/:id/delete",   to: "vendors#destroy"
 
+  get    "/products/:id/delete",    to: "products#destroy_prep", as: :delete_product
+  delete "/products/:id",           to: "products#destroy"
   get "/markets",      to: "markets#index",    as: :markets
   get "/markets/new",  to: "markets#new",      as: :new_market
   post "/markets/new", to: "markets#create"
@@ -15,7 +19,6 @@ Rails.application.routes.draw do
   get "/signin",       to: "sessions#new",     as: :sign_in
   post "/signin",      to: "sessions#create"
   get "/signout",      to: "sessions#destroy", as: :sign_out
-
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

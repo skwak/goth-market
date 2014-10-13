@@ -5,9 +5,19 @@
   <li>Email address: <%= @vendor.email %></li>
   <li>Description: <%= @vendor.description %></li>
   <li>ID #: <%= @vendor.id %></li>
-  <li>Market: <%= @market.name %></li>
+  <% if @market != nil %>
+    <li>Market Name: <%= @market.name %></li>
+    <li>Market Address: <%= @market.address %></li>
+    <li>Market Latitude: <%= @market.latitude %></li>
+    <li>Market Longitutde: <%= @market.longitude %></li>
+  <% else %>
+    <li><%= link_to "Add Market", new_market_path %></li>
+  <% end %>
+
 </ul>
 
-<ul>
-
-</ul>
+<form action="<%= delete_vendor_path %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <label for="submit">Delete Your Account</label><br>
+  <input type="submit" value="Delete">
+</form>

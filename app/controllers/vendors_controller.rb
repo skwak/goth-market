@@ -22,6 +22,12 @@ class VendorsController < ApplicationController
     @market = Market.find_by(vendor_id: session[:user_id])
   end
 
+  def destroy
+    @vendor = Vendor.find(session[:user_id]).delete
+    session[:user_id] = nil
+    redirect_to root_path, :notice => "Deleted!"
+  end
+
   private
 
   def vendor_params
